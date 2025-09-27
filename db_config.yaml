@@ -1,0 +1,21 @@
+sources:
+  - name: sample_postgres
+    type: postgres
+    host: localhost
+    user: postgres
+    password: postgres
+    dbname: etl_source
+    tables:
+      - name: process_area
+        joins: []
+        filters: []
+
+target:
+  type: sqlserver
+  host: localhost\SQLEXPRESS
+  user: sa
+  password: YourPassword
+  dbname: etl_target
+
+threading:
+  max_threads: 3
