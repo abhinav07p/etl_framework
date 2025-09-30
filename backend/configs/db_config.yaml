@@ -2,9 +2,10 @@ sources:
   - name: sample_postgres
     type: postgres
     host: localhost
+    port: 5432
     user: postgres
-    password: postgres
-    dbname: etl_source
+    password: Ranchi0651 
+    dbname: etl_demo      
     tables:
       - name: process_area
         joins: []
@@ -13,9 +14,8 @@ sources:
 target:
   type: sqlserver
   host: localhost\SQLEXPRESS
-  user: sa
-  password: YourPassword
-  dbname: etl_target
+  dbname: etl_demo
+  trusted_connection: yes   
 
 threading:
   max_threads: 3

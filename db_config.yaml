@@ -3,7 +3,7 @@ sources:
     type: postgres
     host: localhost
     user: postgres
-    password: postgres
+    password: Ranchi0651
     dbname: etl_source
     tables:
       - name: process_area
@@ -13,8 +13,7 @@ sources:
 target:
   type: sqlserver
   host: localhost\SQLEXPRESS
-  user: sa
-  password: YourPassword
+  trusted_connection: yes 
   dbname: etl_target
 
 threading:
